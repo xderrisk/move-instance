@@ -12,5 +12,5 @@ An extension for GNOME Shell that automatically moves single-instance applicatio
 
 ## Demo
 <video src="https://github.com/user-attachments/assets/eee899ae-ada5-40ae-9249-71eb6ded8589" width="100%" controls>
-  Tu navegador no soporta videos incrustados.
+Your browser does not support embedded videos.
 </video>
