@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: move-instance\n"
+"POT-Creation-Date: 2026-03-01 15:13-0500\n"
+"PO-Revision-Date: 2026-03-01 15:14-0500\n"
+"Last-Translator: \n"
+"Language-Team: xderrisk\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: schemas/org.gnome.shell.extensions.move-"
+"instance.gschema.xml\n"
+
+#: prefs.js:12
+msgid "WM_CLASS Configuration"
+msgstr "Configuración de WM_CLASS"
+
+#: prefs.js:13
+msgid "Add window class names (e.g., Spotify) to force moving."
+msgstr ""
+"Añade nombres de clase de ventana (ej: Spotify) para forzar el movimiento."
+
+#: prefs.js:20
+msgid "WM_CLASS List (comma separated)"
+msgstr "Lista de WM_CLASS (separada por comas)"
