@@ -1,6 +1,7 @@
 # Move Already Open App
 
 An extension for GNOME Shell that automatically moves single-instance applications (or specific apps via WM_CLASS) to the current workspace when dragged from the dash.
+
 [<img src="https://raw.githubusercontent.com/andyholmes/gnome-shell-extensions-badge/eb9af9a1c6f04eb060cb01de6aeb5c84232cd8c0/get-it-on-ego.svg?sanitize=true" height="100">](https://extensions.gnome.org/extension/9399/move-already-open-app/)
 
 ---
