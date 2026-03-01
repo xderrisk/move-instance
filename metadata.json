@@ -1,6 +1,6 @@
 {
   "name": "Move Already Open App",
-  "description": "Move an open application instance to the workspace where you drop its icon from the dock.",
+  "description": "Move an open application instance to the workspace where you drop its icon from the dash.",
   "uuid": "move-instance@xderrisk.com",
   "shell-version": ["48", "49"],
   "settings-schema": "org.gnome.shell.extensions.move-instance",
