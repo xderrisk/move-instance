@@ -4,6 +4,6 @@
   "uuid": "move-instance@xderrisk.com",
   "shell-version": ["48", "49"],
   "settings-schema": "org.gnome.shell.extensions.move-instance",
-  "gettext-domain": "move-instance",
+  "gettext-domain": "moveinstance",
   "url": "https://github.com/xderrisk/move-instance"
 }
