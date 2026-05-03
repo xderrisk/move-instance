@@ -1,8 +1,5 @@
 import * as Workspace from "resource:///org/gnome/shell/ui/workspace.js";
-import {
-  Extension,
-  gettext as _,
-} from "resource:///org/gnome/shell/extensions/extension.js";
+import { Extension } from "resource:///org/gnome/shell/extensions/extension.js";
 
 let _originalAcceptDrop = null;
 let _settings = null;
