@@ -15,16 +15,12 @@ export default class MoveInstanceExtension extends Extension {
         const whitelist = settings.get_strv("whitelist");
 
         const hasMatchedWMClass = windows.some((window) => {
-          const wmClass = window.get_wm_class();
-          return (
-            wmClass &&
-            whitelist.some((item) =>
-              wmClass.toLowerCase().includes(item.toLowerCase()),
-            )
-          );
+          const wmClass = window.get_wm_class()?.toLowerCase() || "";
+          return whitelist.some((item) => wmClass.includes(item.toLowerCase()));
         });
 
-        const isSingleInstance = !app.can_open_new_window() || hasMatchedWMClass;
+        const isSingleInstance =
+          !app.can_open_new_window() || hasMatchedWMClass;
 
         if (isSingleInstance && windows.length > 0) {
           const windowToMove =
