@@ -18,11 +18,13 @@ export default class MoveInstancePrefs extends ExtensionPreferences {
 
     const row = new Adw.EntryRow({
       title: _("WM_CLASS List (comma separated)"),
-      text: settings.get_strv("whitelist").join(", "),
+      show_apply_button: true,
     });
 
-    row.connect("changed", (entry) => {
-      let list = entry
+    row.text = settings.get_strv("whitelist").join(", ");
+
+    row.connect("apply", (entry) => {
+      const list = entry
         .get_text()
         .split(",")
         .map((s) => s.trim())
