@@ -6,6 +6,7 @@ export default class MoveInstanceExtension extends Extension {
     this._settings = this.getSettings();
     this._originalAcceptDrop = Workspace.Workspace.prototype.acceptDrop;
     const settings = this._settings;
+    const originalAcceptDrop = this._originalAcceptDrop;
 
     Workspace.Workspace.prototype.acceptDrop = function (source) {
       const app = source.app || (source.getApp ? source.getApp() : null);
@@ -31,10 +32,7 @@ export default class MoveInstanceExtension extends Extension {
           }
         }
       }
-      return MoveInstanceExtension.prototype._originalAcceptDrop.call(
-        this,
-        source,
-      );
+      return originalAcceptDrop.apply(this, arguments);
     };
   }
 
