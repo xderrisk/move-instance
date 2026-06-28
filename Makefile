@@ -3,14 +3,15 @@ ZIP_FILE = $(UUID).shell-extension.zip
 DEST = ~/.local/share/gnome-shell/extensions/$(UUID)
 LOCALE_UUID = moveinstance
 
-.PHONY: compile-locales enable install logs nested
+.PHONY: compile-locales enable disable install pack logs nested
 
 install: pack
-	gnome-extensions install --force $(ZIP_FILE)
+	gnome-extensions install --force dist/$(ZIP_FILE)
 	@echo "Installation completed in $(DEST)"
 
 pack: compile-locales
-	gnome-extensions pack --force
+	mkdir -p dist
+	gnome-extensions pack --force --out-dir=dist
 
 compile-locales:
 	@rm -rf locale
@@ -23,6 +24,9 @@ compile-locales:
 
 enable:
 	gnome-extensions enable $(UUID)
+
+disable:
+	gnome-extensions disable $(UUID)
 
 nested: install
 	dbus-run-session -- gnome-shell --nested --wayland
