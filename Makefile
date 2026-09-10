@@ -29,7 +29,7 @@ disable:
 	gnome-extensions disable $(UUID)
 
 nested: install
-	dbus-run-session -- gnome-shell --nested --wayland
+	dbus-run-session gnome-shell --devkit --wayland
 
 logs:
 	journalctl -f -o cat /usr/bin/gnome-shell | grep $(UUID)
