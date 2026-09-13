@@ -7,7 +7,7 @@ export default class MoveInstanceExtension extends Extension {
     const origDrop = Workspace.Workspace.prototype.acceptDrop;
 
     Workspace.Workspace.prototype.acceptDrop = function (source) {
-      const app = source.app ?? source.getApp?.();
+      const app = source.app;
       if (!app) return origDrop.apply(this, arguments);
 
       const windows = app.get_windows();
