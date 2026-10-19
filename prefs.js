@@ -53,6 +53,13 @@ export default class MoveInstancePrefs extends ExtensionPreferences {
       settings.set_strv("whitelist", wmClassList);
     });
 
+    settings.bind(
+      "force-all",
+      whitelistRow,
+      "sensitive",
+      Gio.SettingsBindFlags.GET | Gio.SettingsBindFlags.INVERT_BOOLEAN,
+    );
+
     group.add(whitelistRow);
   }
 }
