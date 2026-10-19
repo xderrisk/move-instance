@@ -6,7 +6,7 @@ An extension for GNOME Shell that automatically moves single-instance applicatio
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Dynamic Detection**: Automatically works with apps that don't support multiple windows (e.g., Karere).
 - **WM_CLASS Support**: Force specific apps like **Spotify** or **Bitwarden** to move by adding their Window Class name in settings.
@@ -16,3 +16,7 @@ An extension for GNOME Shell that automatically moves single-instance applicatio
 <video src="https://github.com/user-attachments/assets/eee899ae-ada5-40ae-9249-71eb6ded8589" width="100%" controls>
 Your browser does not support embedded videos.
 </video>
+
+## Contributing
+
+Translations and development instructions are in [CONTRIBUTING.md](CONTRIBUTING.md).
