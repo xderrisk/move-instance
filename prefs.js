@@ -67,9 +67,25 @@ export default class MoveInstancePrefs extends ExtensionPreferences {
     });
     resetRow.add_css_class("destructive-action");
     resetRow.connect("activated", () => {
-      for (const key of settings.settings_schema.list_keys())
-        settings.reset(key);
-      whitelistRow.text = "";
+      const resetDialog = new Adw.AlertDialog({
+        heading: _("Reset all settings?"),
+        body: _("This will restore all options to their default values."),
+      });
+      resetDialog.add_response("cancel", _("Cancel"));
+      resetDialog.add_response("reset", _("Reset"));
+      resetDialog.set_response_appearance(
+        "reset",
+        Adw.ResponseAppearance.DESTRUCTIVE,
+      );
+      resetDialog.set_default_response("cancel");
+      resetDialog.set_close_response("cancel");
+      resetDialog.connect("response", (_, response) => {
+        if (response !== "reset") return;
+        for (const key of settings.settings_schema.list_keys())
+          settings.reset(key);
+        whitelistRow.text = "";
+      });
+      resetDialog.present(window);
     });
     group.add(resetRow);
   }
