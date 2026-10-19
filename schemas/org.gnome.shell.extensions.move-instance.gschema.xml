@@ -5,5 +5,9 @@
       <default>['Spotify', 'Bitwarden']</default>
       <summary>Force Move Application List</summary>
     </key>
+    <key name="force-all" type="b">
+      <default>false</default>
+      <summary>Treat All Applications as Single Instance</summary>
+    </key>
   </schema>
 </schemalist>

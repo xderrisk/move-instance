@@ -1,4 +1,5 @@
 import Adw from "gi://Adw";
+import Gio from "gi://Gio";
 import {
   ExtensionPreferences,
   gettext as _,
@@ -15,6 +16,15 @@ export default class MoveInstancePrefs extends ExtensionPreferences {
 
     window.add(page);
     page.add(group);
+
+    const switchRow = new Adw.SwitchRow({
+      title: _("Treat all apps as single instance"),
+      subtitle: _(
+        "Move any dragged app to the current workspace instead of launching a new window",
+      ),
+    });
+    settings.bind("force-all", switchRow, "active", Gio.SettingsBindFlags.DEFAULT);
+    group.add(switchRow);
 
     const row = new Adw.EntryRow({
       title: _("WM_CLASS List (comma separated)"),

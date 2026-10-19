@@ -20,7 +20,11 @@ export default class MoveInstanceExtension extends Extension {
         ),
       );
 
-      if (!app.can_open_new_window() || hasWL) {
+      if (
+        settings.get_boolean("force-all") ||
+        !app.can_open_new_window() ||
+        hasWL
+      ) {
         const win =
           windows.find((w) => w.get_window_type() === 0) ?? windows[0];
         win.change_workspace(this.metaWorkspace);
