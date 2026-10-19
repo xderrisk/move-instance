@@ -1,14 +1,14 @@
-# Spanish translations for PACKAGE package.
-# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for move-instance package.
+# Copyright (C) 2026 THE move-instance'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the move-instance package.
 # Sergio Galarza <xderrisk@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: move-instance\n"
-"Report-Msgid-Bugs-To: xderrisk@gmail.com\n"
-"POT-Creation-Date: 2026-10-19 09:45-0500\n"
-"PO-Revision-Date: 2026-10-19 09:49-0500\n"
+"Report-Msgid-Bugs-To: https://github.com/xderrisk/move-instance/issues\n"
+"POT-Creation-Date: 2026-10-19 11:32-0500\n"
+"PO-Revision-Date: 2026-10-19 11:41-0500\n"
 "Last-Translator: Sergio Galarza <xderrisk@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
@@ -19,18 +19,14 @@ msgstr ""
 "X-Generator: Gtranslator 51.0\n"
 
 #: prefs.js:13
-msgid "WM_CLASS Configuration"
-msgstr "Configuración de WM_CLASS"
+msgid "Configuration"
+msgstr "Configuración"
 
-#: prefs.js:14
-msgid "Add window class names (e.g., Spotify) to force moving."
-msgstr "Añade nombres WM_CLASS (ej: Spotify) para forzar el movimiento."
-
-#: prefs.js:21
+#: prefs.js:20
 msgid "Treat all apps as single instance"
 msgstr "Trate todas las aplicaciones como una instancia única"
 
-#: prefs.js:23
+#: prefs.js:22
 msgid ""
 "Move any dragged app to the current workspace instead of launching a new "
 "window"
@@ -38,6 +34,15 @@ msgstr ""
 "Mueva cualquier aplicación arrastrada al espacio de trabajo actual en lugar "
 "de abrir una nueva ventana"
 
-#: prefs.js:30
-msgid "WM_CLASS List (comma separated)"
-msgstr "Lista de WM_CLASS (separada por comas)"
+#: prefs.js:35
+msgid "Force specific apps by adding their wmclass (comma separated)."
+msgstr ""
+"Fuerce aplicaciones específicas agregando su wmclass (separadas por comas)."
+
+#: prefs.js:42
+msgid ""
+"e.g. or.gnome.Nautilus, firefox-esr, org.gnome.Console\n"
+"Find it with Looking Glass (Alt+F2, lg) → Windows."
+msgstr ""
+"p.ej. o.gnome.Nautilus, firefox-esr, org.gnome.Console \n"
+"Encuéntrelo con Looking Glass (Alt+F2, lg) → Windows."
