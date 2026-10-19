@@ -61,5 +61,16 @@ export default class MoveInstancePrefs extends ExtensionPreferences {
     );
 
     group.add(whitelistRow);
+
+    const resetRow = new Adw.ButtonRow({
+      title: _("Reset all settings"),
+    });
+    resetRow.add_css_class("destructive-action");
+    resetRow.connect("activated", () => {
+      for (const key of settings.settings_schema.list_keys())
+        settings.reset(key);
+      whitelistRow.text = "";
+    });
+    group.add(resetRow);
   }
 }
