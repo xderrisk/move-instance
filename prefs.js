@@ -10,38 +10,42 @@ export default class MoveInstancePrefs extends ExtensionPreferences {
     const settings = this.getSettings();
     const page = new Adw.PreferencesPage();
     const group = new Adw.PreferencesGroup({
-      title: _("WM_CLASS Configuration"),
-      description: _("Add window class names (e.g., Spotify) to force moving."),
+      title: _("Configuration"),
     });
 
     window.add(page);
     page.add(group);
 
-    const switchRow = new Adw.SwitchRow({
+    const forceSingleInstanceRow = new Adw.SwitchRow({
       title: _("Treat all apps as single instance"),
       subtitle: _(
         "Move any dragged app to the current workspace instead of launching a new window",
       ),
     });
-    settings.bind("force-all", switchRow, "active", Gio.SettingsBindFlags.DEFAULT);
-    group.add(switchRow);
+    settings.bind(
+      "force-all",
+      forceSingleInstanceRow,
+      "active",
+      Gio.SettingsBindFlags.DEFAULT,
+    );
+    group.add(forceSingleInstanceRow);
 
-    const row = new Adw.EntryRow({
+    const whitelistRow = new Adw.EntryRow({
       title: _("WM_CLASS List (comma separated)"),
       show_apply_button: true,
     });
 
-    row.text = settings.get_strv("whitelist").join(", ");
+    whitelistRow.text = settings.get_strv("whitelist").join(", ");
 
-    row.connect("apply", (entry) => {
-      const list = entry
+    whitelistRow.connect("apply", (entry) => {
+      const wmClassList = entry
         .get_text()
         .split(",")
         .map((s) => s.trim())
         .filter((s) => s !== "");
-      settings.set_strv("whitelist", list);
+      settings.set_strv("whitelist", wmClassList);
     });
 
-    group.add(row);
+    group.add(whitelistRow);
   }
 }
