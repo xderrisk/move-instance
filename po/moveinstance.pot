@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-18 19:58-0500\n"
+"POT-Creation-Date: 2026-10-19 09:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +17,24 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: prefs.js:12
+#: prefs.js:13
 msgid "WM_CLASS Configuration"
 msgstr ""
 
-#: prefs.js:13
+#: prefs.js:14
 msgid "Add window class names (e.g., Spotify) to force moving."
 msgstr ""
 
-#: prefs.js:20
+#: prefs.js:21
+msgid "Treat all apps as single instance"
+msgstr ""
+
+#: prefs.js:23
+msgid ""
+"Move any dragged app to the current workspace instead of launching a new "
+"window"
+msgstr ""
+
+#: prefs.js:30
 msgid "WM_CLASS List (comma separated)"
 msgstr ""

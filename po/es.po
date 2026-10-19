@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: move-instance\n"
 "Report-Msgid-Bugs-To: xderrisk@gmail.com\n"
-"POT-Creation-Date: 2026-10-18 19:58-0500\n"
-"PO-Revision-Date: 2026-10-18 20:40-0500\n"
+"POT-Creation-Date: 2026-10-19 09:45-0500\n"
+"PO-Revision-Date: 2026-10-19 09:49-0500\n"
 "Last-Translator: Sergio Galarza <xderrisk@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
@@ -18,14 +18,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 51.0\n"
 
-#: prefs.js:12
+#: prefs.js:13
 msgid "WM_CLASS Configuration"
 msgstr "Configuración de WM_CLASS"
 
-#: prefs.js:13
+#: prefs.js:14
 msgid "Add window class names (e.g., Spotify) to force moving."
 msgstr "Añade nombres WM_CLASS (ej: Spotify) para forzar el movimiento."
 
-#: prefs.js:20
+#: prefs.js:21
+msgid "Treat all apps as single instance"
+msgstr "Trate todas las aplicaciones como una instancia única"
+
+#: prefs.js:23
+msgid ""
+"Move any dragged app to the current workspace instead of launching a new "
+"window"
+msgstr ""
+"Mueva cualquier aplicación arrastrada al espacio de trabajo actual en lugar "
+"de abrir una nueva ventana"
+
+#: prefs.js:30
 msgid "WM_CLASS List (comma separated)"
 msgstr "Lista de WM_CLASS (separada por comas)"
