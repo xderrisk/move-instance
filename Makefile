@@ -15,7 +15,10 @@ pack: compile-locales
 	gnome-extensions pack --force --out-dir=dist
 
 pot:
-	xgettext -L Javascript -o ./po/moveinstance.pot *.js
+	xgettext -L Javascript --from-code=UTF-8 \
+		--package-name=move-instance \
+		--msgid-bugs-address=https://github.com/xderrisk/move-instance/issues \
+		-o ./po/moveinstance.pot *.js
 
 compile-locales:
 	@rm -rf locale
