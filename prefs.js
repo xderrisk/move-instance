@@ -31,10 +31,17 @@ export default class MoveInstancePrefs extends ExtensionPreferences {
     group.add(forceSingleInstanceRow);
 
     const whitelistRow = new Adw.EntryRow({
-      title: _("WM_CLASS List (comma separated)"),
+      title: _(
+        "Force specific apps by adding their wmclass (comma separated).",
+      ),
       show_apply_button: true,
     });
 
+    whitelistRow.set_tooltip_text(
+      _(
+        "e.g. or.gnome.Nautilus, firefox-esr, org.gnome.Console\nFind it with Looking Glass (Alt+F2, lg) → Windows.",
+      ),
+    );
     whitelistRow.text = settings.get_strv("whitelist").join(", ");
 
     whitelistRow.connect("apply", (entry) => {
