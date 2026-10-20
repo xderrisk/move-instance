@@ -7,6 +7,7 @@ Thanks for your interest in improving Move Already Open App! Here's how to set u
 - **GNOME Shell 48+**
 - **make**
 - **gettext**
+- **uv** (only for `make analyze`, the EGO lint check): https://docs.astral.sh/uv/
 
 On Debian:
 
@@ -24,6 +25,7 @@ sudo apt install make gettext
 | `make nested` | Run a nested Wayland GNOME Shell session for safe testing |
 | `make logs` | Follow the journal for messages from this extension |
 | `make pot` | Regenerate `po/moveinstance.pot` from the source |
+| `make analyze` | Pack and run the EGO lint check (`shexli`) via `uv` |
 
 ## Testing a local change with `install.sh`
 

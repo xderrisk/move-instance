@@ -1,18 +1,23 @@
 UUID = move-instance@xderrisk.com
-ZIP_FILE = $(UUID).shell-extension.zip
+ZIP_FILE = dist/$(UUID).shell-extension.zip
 DEST = ~/.local/share/gnome-shell/extensions/$(UUID)
 LOCALE_UUID = moveinstance
 GNOME_VERSION := $(shell gnome-shell --version | grep -oP '\d+' | head -n 1)
 
-.PHONY: compile-locales enable disable install pack logs nested pot
+.PHONY: compile-locales enable disable install pack logs nested pot analyze
 
 install: pack
-	gnome-extensions install --force dist/$(ZIP_FILE)
+	gnome-extensions install --force $(ZIP_FILE)
 	@echo "Installation completed in $(DEST)"
 
 pack: compile-locales
 	mkdir -p dist
 	gnome-extensions pack --force --out-dir=dist
+
+analyze: pack
+	uv venv --allow-existing
+	uv pip install -U shexli
+	uv run shexli $(ZIP_FILE)
 
 pot:
 	xgettext -L Javascript --from-code=UTF-8 \
