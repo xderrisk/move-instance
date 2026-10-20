@@ -1,2 +1,4 @@
 dist
 locale
+node_modules
+.venv

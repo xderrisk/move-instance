@@ -1,0 +1,28 @@
+{
+  "name": "move-instance",
+  "version": "0.0.0",
+  "description": "Move an open application instance to the workspace where you drop its icon from the dash.",
+  "type": "module",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xderrisk/move-instance.git"
+  },
+  "author": "Sergio Galarza <xderrisk@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/xderrisk/move-instance/issues"
+  },
+  "homepage": "https://github.com/xderrisk/move-instance#readme",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@girs/gjs": "^5.5.0",
+    "@girs/gnome-shell": "^50.0.4"
+  }
+}
