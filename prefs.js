@@ -39,7 +39,7 @@ export default class MoveInstancePrefs extends ExtensionPreferences {
 
     whitelistRow.set_tooltip_text(
       _(
-        "e.g. or.gnome.Nautilus, firefox-esr, org.gnome.Console\nFind it with Looking Glass (Alt+F2, lg) → Windows.",
+        "e.g. org.gnome.Nautilus, firefox-esr, org.gnome.Console\nFind it with Looking Glass (Alt+F2, lg) → Windows.",
       ),
     );
     whitelistRow.text = settings.get_strv("whitelist").join(", ");

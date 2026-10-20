@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: move-instance\n"
 "Report-Msgid-Bugs-To: https://github.com/xderrisk/move-instance/issues\n"
-"POT-Creation-Date: 2026-10-19 21:43-0500\n"
-"PO-Revision-Date: 2026-10-19 21:47-0500\n"
+"POT-Creation-Date: 2026-10-19 23:11-0500\n"
+"PO-Revision-Date: 2026-10-19 23:12-0500\n"
 "Last-Translator: Sergio Galarza <xderrisk@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
@@ -41,10 +41,10 @@ msgstr ""
 
 #: prefs.js:42
 msgid ""
-"e.g. or.gnome.Nautilus, firefox-esr, org.gnome.Console\n"
+"e.g. org.gnome.Nautilus, firefox-esr, org.gnome.Console\n"
 "Find it with Looking Glass (Alt+F2, lg) → Windows."
 msgstr ""
-"p.ej. o.gnome.Nautilus, firefox-esr, org.gnome.Console \n"
+"p.ej. org.gnome.Nautilus, firefox-esr, org.gnome.Console \n"
 "Encuéntrelo con Looking Glass (Alt+F2, lg) → Windows."
 
 #: prefs.js:66
