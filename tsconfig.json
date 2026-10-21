@@ -9,6 +9,5 @@
     "target": "ES2023",
     "lib": ["ES2023"],
   },
-  "include": ["ambient.d.ts"],
-  "files": ["extension.ts", "prefs.ts"],
+  "include": ["src/**/*.ts"],
 }
